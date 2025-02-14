@@ -1,106 +1,122 @@
 *{
-    margin: 0;
-    padding: 0;
-  }
-  body{
-    /* background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%); */
-    background-color: white;
-  }
-  h1{
-    text-align: center;
-    padding: 15px;
-    font-size: 35px;
-  }
-  .line{
-    /* border: 2px solid black; */
-    box-shadow:  2px 2px 20px grey;
-    background-color: grey;
-    height: 4px;
-    border-top-left-radius: 400px 100px;
-    border-top-right-radius: 400px 100px;
-    border-bottom-left-radius:  400px 100px;
-    border-bottom-right-radius:  400px 100px;
-  }
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%); */
+  background-color: white;
+}
+h1{
+  text-align: center;
+  padding: 15px;
+  font-size: 35px;
+}
+.line{
+  /* border: 2px solid black; */
+  box-shadow:  2px 2px 20px grey;
+  background-color: grey;
+  height: 4px;
+  border-top-left-radius: 400px 100px;
+  border-top-right-radius: 400px 100px;
+  border-bottom-left-radius:  400px 100px;
+  border-bottom-right-radius:  400px 100px;
+}
+.item-container{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+  margin: 20px;
+  gap: 18px;
+}
+@media screen and (max-width: 500px) {
   .item-container{
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    justify-content: center;
-    margin: 20px;
-    gap: 18px;
+    flex-wrap: wrap;
+    grid-template-columns: 160px 160px ;
   }
+}
+.item-card{
+  /* border: 2px solid black; */
+  box-shadow: 2px 2px 20px grey;
+  height: 300px;
+  width: 240px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:420px) {
   .item-card{
-    /* border: 2px solid black; */
-    box-shadow: 2px 2px 20px grey;
-    height: 300px;
-    width: 240px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 8px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 20px;
-  }
-  .item-card:hover{
-    transition: all 0.5s ease-in-out;
-    scale: 1.1;
-  }
-  .item-imageContainer{
-    display: flex;
-    justify-content: center;
-  }
+   width: 150px;
+  } 
   .item-imageContainer img{
-    height: 150px;
-    margin: 5px;
-    border-radius: 7px;
+    width:90% ;
   }
-  .item-nameContainer{
-    display: flex;
-    flex-direction:column;
-    margin-left: 10px;
-    margin-bottom: 18px;
-  }
-  .item-name{
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .item-des{
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-  .item-price{
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .btn-container{
-    display: flex;
-    justify-content: center;
-  }
-  .btn{
-    padding: 6px;
-    border-radius: 15px;
-    width: 70%;
-    font-size: 15px;
-    font-weight: 400;
-    background-color:#e6ffff;
-    cursor: pointer;
-  }
-  .btn:hover{
-    background-color:#c8fefe;
-  }
-  .final-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #final-btn{
-    margin: 25px;
-    padding: 6px;
-    border-radius: 15px;
-    width: 70%;
-    font-size: 20px;
-    font-weight: 400;
-    background-color: rgb(243, 243, 243);
-    cursor: pointer;
-  }
-  
+}
+.item-card:hover{
+  transition: all 0.5s ease-in-out;
+  scale: 1.1;
+}
+.item-imageContainer{
+  display: flex;
+  justify-content: center;
+}
+.item-imageContainer img{
+  height: 150px;
+  margin: 5px;
+  border-radius: 7px;
+}
+.item-nameContainer{
+  display: flex;
+  flex-direction:column;
+  margin-left: 10px;
+  margin-bottom: 18px;
+}
+.item-name{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.item-des{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.item-price{
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  padding: 6px;
+  border-radius: 15px;
+  width: 70%;
+  font-size: 15px;
+  font-weight: 400;
+  background-color:#e6ffff;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color:#c8fefe;
+}
+.final-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#final-btn{
+  margin: 25px;
+  padding: 6px;
+  border-radius: 15px;
+  width: 70%;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+
+
+
   
